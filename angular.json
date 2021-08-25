@@ -31,9 +31,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -102,6 +107,37 @@
               "src/styles.sass"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "csob-leasing-test": {
+      "projectType": "library",
+      "root": "projects/csob-leasing-test",
+      "sourceRoot": "projects/csob-leasing-test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/csob-leasing-test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/csob-leasing-test/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/csob-leasing-test/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/csob-leasing-test/src/test.ts",
+            "tsConfig": "projects/csob-leasing-test/tsconfig.spec.json",
+            "karmaConfig": "projects/csob-leasing-test/karma.conf.js"
           }
         }
       }

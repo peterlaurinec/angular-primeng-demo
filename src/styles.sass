@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap-theme'
+@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap-icons/font/bootstrap-icons.css'
+
+//sidebar
+.side-bar    
+    //buttons
+    .btn
+        color: $primary
+        &:hover
+            color: $white
+            background-color: $primary
+        &.active
+            border-color: $primary
+
+//toolbar
+.toolbar
+    .btn 
+        background-color: $light
+        border-color: $gray-200
+        &:hover
+            background-color: $gray-300   
+            border-color: $gray-200     
+    
+    .active
+        background-color: $primary
+        border-color: $primary
+        color: $white
